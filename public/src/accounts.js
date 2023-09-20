@@ -2,16 +2,12 @@
 const findAccountById = (accounts, id) => accounts.find(account => account.id === id);
 
 function sortAccountsByLastName(accounts) {
-  // YOUR SOLUTION HERE
-  // Hint: You can use the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method here. 
   accounts.sort((prev, curr) => prev.name.last > curr.name.last ? 1 : -1);
   return accounts;
 }
 
 // named function expression
 const getAccountFullNames = function getFullNames(accounts) {
-  // YOUR SOLUTION HERE
-  // Hint: You can use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method here.
   return accounts.map(account => {
     // nested object destructuring with custom name for variables.
     const { name: { first: firstName, last: lastName } } = account;
